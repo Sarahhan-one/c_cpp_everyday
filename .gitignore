@@ -1,3 +1,6 @@
+# Visual Studio folder
+.vs/
+
 # Build directories
 Debug/
 x64/
