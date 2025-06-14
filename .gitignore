@@ -1,0 +1,23 @@
+# Build directories
+Debug/
+x64/
+**/Debug/
+**/x64/
+
+# Visual Studio files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# Only keep source files
+!*.c
+!*.h
+!*.txt
+!README.md
