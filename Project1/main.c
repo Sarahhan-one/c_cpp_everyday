@@ -1,7 +1,7 @@
-#include "day09.h"
+#include "day10.h"
 
 int main() {
-	f17_03();
+	f20_12();
 
 	return 0;
 }

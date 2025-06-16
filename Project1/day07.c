@@ -75,13 +75,13 @@ int sub(int a, int b) {
 int mul(int a, int b) {
 	return a * b;
 }
-int div(int a, int b) {
-	if (b == 0) {
-		printf("Division by zero is not allowed.\n");
-		return 0;
-	}
-	return a / b;
-}
+//int div(int a, int b) {
+//	if (b == 0) {
+//		printf("Division by zero is not allowed.\n");
+//		return 0;
+//	}
+//	return a / b;
+//}
 
 int (*get_func(int num))(int, int) {
 	if (num == 0) {
