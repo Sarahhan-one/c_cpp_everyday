@@ -1,3 +1,4 @@
+#if 0
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -108,6 +109,7 @@ int main() {
 	deleteNode(dnode);
 	deleteNode(dnode);
 	//printf("%d %d %d\n", Head->next->Data, Head->next->next->Data, Head->next->next->next->Data);
+#endif
 
 #if 0
 	//option 1 : 
@@ -161,5 +163,5 @@ int main() {
 
 	printf("%d %d %d\n", A->Data, A->left->Data, A->left->left->Data); 
 	printf("%d %d %d\n", A->Data, A->left->Data, A->left->right->Data);
-#endif
 }
+#endif
