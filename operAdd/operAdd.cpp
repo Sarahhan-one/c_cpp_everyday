@@ -9,15 +9,15 @@ public:
 	void print() {
 		cout << "Point(" << x << ", " << y << ")" << endl;
 	}
-	Point operator+(const Point& p) { // overload + operator
-		Point res(x + p.x, y + p.y);
-		return res; 
-	}
+	//friend : allows the function to access private members of the class
+	friend Point operator+(const Point& p1, const Point& p2); 
 };
 
-Point operator+ (const Point& p1, const Point& p2) {
-	return Point(p1.x + p2.x, p1.y + p2.y);
+Point operator+(const Point& p1, const Point& p2) { // overload + operator
+	Point res(p1.x + p2.x, p1.y + p2.y);
+	return res;
 }
+
 
 int main() {
 	Point p1(1, 2);

@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//define the shared interface for PocketMon
 class PocketMon {
 protected:
 	string name;

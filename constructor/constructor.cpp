@@ -3,6 +3,26 @@
 #include <cstring>
 using namespace std;
 
+class Test1 {
+public: 
+	int a = 0; //member variable - saved in the object
+	static int b; //static variable - shared by all objects, saved in the class
+
+    //increment a and b by 1 
+    Test1* add() {
+        a++; 
+        b++; 
+        return this; 
+    }
+
+    Test1* printVal() {
+        cout << "a: " << a << endl;
+        cout << "b: " << b << endl;
+		return this; //return the current object    
+    }
+};
+int Test1::b = 0; //initialize static variable outside the class
+
 class Product {
 public:
     int num; 
@@ -22,7 +42,7 @@ public:
         cout << "price:" << price << endl;
     }
 };
-int Product::cnt = 1;
+int Product::cnt = 1;//initialize static variable outside the class
 
 class Test2 {
 public:
