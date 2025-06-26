@@ -1,0 +1,16 @@
+<Exception Handling>
+
+Exception: 
+A problem that occurs during program execution. The default behavior is termination.
+Division by zero, null pointer exceptions, freeing already freed memory...
+
+Exception handling: 
+A structure that prevents program termination when exceptions occur and allows the code to continue execution
+Problem occurs => Exception thrown => Exception caught and handled
+
+Exception handling syntax
+- try: Contains code that might throw exceptions
+- throw: Raises an exception. When invalid code is detected, an exception is raised/thrown
+- catch : Handles exceptions thrown from the try block
+A catch block only receives exception objects of the same parameter type
+- catch(...) block: Catches all exceptions

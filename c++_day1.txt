@@ -1,0 +1,96 @@
+Object-Oriented Programming - C++
+
+1. Encapsulation
+2. Overloading, Overriding
+3. Inheritance, Polymorphism
+
+Compilation => ELF format file (object file) / ~.o => Linking => Executable file (~.exe)
+text (constant area: code, constants)
+data (initialized static, global variables)
+bss(ZI) (uninitialized static, global variables)
+
+=> Execution => RAM allocation
+text
+data
+bss (initialized to 0)
+heap (dynamic allocation, Stores large objects)
+stack (functions, parameters, local variables)
+
+_________________________________________________________________
+<Differences from C>
+
+1. scanf()/printf() => cin / cout
+2. :: scope operator.
+Namespaces are used to distinguish name spaces
+3. Local variable declaration position: in C++, you only need to declare before use.
+Position doesn't matter
+for(int i=0;i<10;i++)
+4. Heap memory allocation
+malloc(size) / free() => new  / delete
+5. C++ allows function overloading
+Function overloading: ability to define multiple functions with the same name
+Must differ in parameter count or type.
+
+add(int, int)
+add(int, int, int)
+add(float, float)
+add(const char *, const char* )
+add(1.2f, 3.4f);
+
+____________________________________________________________________________
+
+1. Function drawbacks
+Recursive calls risk stack overflow issues
+Function call -> function branch -> pipeline deletion and rebuilding
+=> Overhead occurs
+
+Short functions can be replaced with macros or inline functions
+Macro: processed by preprocessor. Replaces function call with code
+Side effects can occur. Difficult to check types
+Inline: processed by compiler. Type checking possible.
+
+=> Used for short functions of 2-3 lines with relatively simple processing without loops
+
+1. Reference variables
+Must be initialized when declared.
+int a = 10; //variable declaration: stack, static memory allocation
+int &b = a; //b: reference variable.
+=> Even compiler can't distinguish original. a, b are identical
+
+call by value: passing a copy of the variable value
+call by reference: passing through a reference variable
+
+_________________________________________________________________________
+
+Object-Oriented Programming
+Programming centered around objects
+=> Derive objects that compose the part to be whole
+=> Define objects, specify relationships
+=> Implement polymorphism
+: Define the functions this program will provide externally
+
+Actor selection: People/systems that will use this system
+Define functions to be provided for each actor
+_________________________________________________________________________________
+
+- Access modifiers: 
+private: visible only within class, provides encapsulation.
+Prevents direct access from outside class=>protection. Assigned to member variables
+protected: visible only to inherited classes and invisible to other classes
+public: visible to all
+
+- Overloading
+//Overloading: technique of defining multiple functions with the same name
+//Eliminates the hassle of having to name functions differently based on input/output values despite having the same functionality
+//Can also be used for polymorphism
+//Parameters must differ in type or count for the compiler to distinguish function calls
+
+- Constructor
+Member function with the same name as the class. Has no return type
+Cannot be called freely. Only called during object creation!
+Object initialization. Assigns values to member variables
+If no constructor is written, compiler automatically generates one that does nothing
+If even one is written, automatic generation doesn't occur
+Can create multiple through overloading
+
+- Destructor

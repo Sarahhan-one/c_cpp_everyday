@@ -1,0 +1,41 @@
+Pure Virtual Function / Abstract Function
+A function without implementation.
+Function declaration = 0;
+=> State where function is not implemented
+Purpose is inheritance. Appropriately implemented in derived subclasses
+
+Abstract Class
+A class containing one or more pure virtual functions. Incomplete class.
+Cannot create objects.
+Must implement all pure virtual functions in derived classes to create objects.
+
+=> Provides outline to subclasses. All inherited abstract functions must be implemented
+
+---
+
+Multiple Inheritance
+Inheriting from multiple parent classes
+class Child: Parent1, Parent2... {
+
+}
+
+Advantages: Powerful. Can use various attributes and functions.
+Disadvantages: Diamond-shaped inheritance causes ambiguity => error
+
+---
+
+Operator Overloading
+Modify operators to work with custom classes
+*Member functions
+*Global functions
+
+____
+Templates
+Writing comprehensive code. Generalized coding.
+Function template: Defining functions generally
+
+template
+T1 function(T1 a, T2 b){
+cout<<a<<b<<endl;
+return a;
+}

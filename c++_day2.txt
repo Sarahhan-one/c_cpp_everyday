@@ -1,0 +1,56 @@
+- static
+- Variables
+Can be used with class member variables or member functions
+static variables are created at program start regardless of object creation and exist until the end
+Not a member variable but a variable shared by objects created from the defined class
+static variables should not be accessed using the object name, but should be expressed as [class_name::variable_name].
+
+- Functions
+Add the static keyword when declaring
+Can be used immediately without creating an object
+Mainly used to provide API functionality unrelated to objects
+Member functions: Can use both member variables and static variables
+Can call both member functions and static functions
+Static functions: Can only use static variables
+Can only call static functions
+
+- Singleton
+Creating and sharing only one object in a program
+
+- Only one object is created for resource management.
+Constructor is private. Objects created internally are made static
+Must provide a static public getInstance() function to pass the internally created object externally.
+
+---
+
+Increases code reusability
+Implements polymorphism
+
+- Inheritance syntax
+Child class name : access modifier Parent class name
+Inherits all members "except private members and constructors from the parent class"
+Access modifiers (private, protected, public)
+public inheritance: Inherits the original access modifiers as is
+protected inheritance: Original protected or higher (protected/public) are all inherited as protected
+private inheritance: All are inherited as private
+
+---
+
+Upcasting
+In inheritance relationships, raising a child object's type to the parent type
+Only applicable to pointer variables
+
+Virtual functions
+Add the "virtual" keyword to functions that will be overridden
+Enables dynamic dispatch
+Static dispatch: 
+When a non-virtual function is redefined and called, it follows the type
+Determined at compile time
+
+Dynamic dispatch: Applied to virtual functions. In an upcasted state, it doesn't follow the variable type
+but calls the function of the created object's type
+
+Downcasting
+Technique to lower an upcasted object to its original type
+An upcasted object has a parent type, so additional members in the child class are not visible
+Must downcast to access added members
